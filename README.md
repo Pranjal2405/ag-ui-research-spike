@@ -1,13 +1,17 @@
-🧪 Spike 001 – Evaluate AG-UI Protocol for Agentic UX
-📌 Overview
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _  _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _
+ Spike 001 – Evaluate AG-UI Protocol for Agentic UX
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _  _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+Overview:
 
 This repository contains my research spike focused on evaluating AG-UI as a unified UI protocol for agent-based applications.
 
 AG-UI is an event-based protocol designed to connect AI agents to frontends in a consistent way. Instead of building custom UI integrations for every framework, AG-UI aims to standardize how agents stream responses, trigger tools, and sync UI state.
 
 The goal of this spike was to test how practical, usable, and flexible AG-UI is when integrating it with real agent frameworks.
+______________________________________________________________________________________________________________________________________________________________
 
-🎯 Objective
+Objective:
 
 The main objective of this spike was to test the hypothesis:
 
@@ -26,8 +30,9 @@ Tested streaming, tool execution, and multi-turn conversations
 Observed integration effort and runtime behavior
 
 The broader goal was to compare multiple frameworks (Mastra, LangChain, CrewAI), starting with Mastra as the working prototype.
+______________________________________________________________________________________________________________________________________________________________
 
-🏗 Architecture
+ Architecture:
 Frontend (Next.js + CopilotKit)
         ↓
 AG-UI Runtime Layer
@@ -37,7 +42,7 @@ Mastra Agent Framework
 Groq LLM (llama-3.1-8b-instant)
         ↓
 Custom Tools (Weather API, Student Form)
-
+______________________________________________________________________________________________________________________________________________________________
 
 AG-UI acts as the communication layer between the frontend and the backend agent, handling:
 
@@ -48,32 +53,34 @@ Tool invocation events
 UI state updates
 
 Multi-turn conversation handling
+______________________________________________________________________________________________________________________________________________________________
 
-⚙️ Implementation Summary
+ Implementation Summary:
 
 In this spike, I successfully implemented:
 
-✅ AG-UI frontend using official quickstart
+-> AG-UI frontend using official quickstart
 
-✅ Mastra agent integration
+-> Mastra agent integration
 
-✅ Groq LLM integration
+-> Groq LLM integration
 
-✅ Weather tool (API-based)
+-> Weather tool (API-based)
 
-✅ Student form filling tool
+-> Student form filling tool
 
-✅ Streaming backend responses to frontend
+-> Streaming backend responses to frontend
 
-✅ Tool invocation via AG-UI event system
+-> Tool invocation via AG-UI event system
 
-✅ Multi-turn interaction handling
+-> Multi-turn interaction handling
 
 The Mastra + AG-UI demo runs successfully and demonstrates core agentic UX behavior.
 
 Attempts were also made to integrate CrewAI as a second framework for comparison, but that integration is still work in progress due to runtime and provider compatibility issues.
+______________________________________________________________________________________________________________________________________________________________
 
-🔍 Findings
+ Findings:
 
 From implementation and testing:
 
@@ -92,8 +99,9 @@ Runtime version mismatches can cause unexpected errors.
 LLM provider configuration must match runtime expectations.
 
 Overall, AG-UI reduces frontend duplication effort, though backend adapters are still required per framework.
+______________________________________________________________________________________________________________________________________________________________
 
-✅ Conclusion
+ Conclusion:
 
 AG-UI is a promising vendor-neutral UX protocol layer for agent-based applications.
 
@@ -108,13 +116,14 @@ UI state synchronization
 Multi-turn conversations
 
 The Mastra integration validates the core hypothesis that AG-UI can act as a shared frontend layer.
+______________________________________________________________________________________________________________________________________________________________
 
-🚀 Recommended Next Steps
+Recommended Next Steps:
 
-Complete integration with a second framework (CrewAI or LangChain)
+-Complete integration with a second framework (CrewAI or LangChain)
 
-Create reusable adapter templates
+-Create reusable adapter templates
 
-Benchmark performance under load
+-Benchmark performance under load
 
-Standardize provider configuration patterns
+-Standardize provider configuration patterns
